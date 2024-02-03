@@ -6,7 +6,7 @@ Before running, make sure that your local machine has PHP and Composer installed
 
 1. Clone repository:
    ``git clone https://github.com/ThangNguyen153/invoicing-system.git``
-2. Edit ``.env`` file: please create a new database first and update DB Configuration
+2. Copy ``.env.example`` and rename to ``.env``. Edit ``.env`` file (please create a new database first and update DB Configuration):
     ```
    DB_CONNECTION=mysql
    DB_HOST=your db host ip
@@ -17,12 +17,15 @@ Before running, make sure that your local machine has PHP and Composer installed
    ```
 3. Install vendor:
     ``composer install``
-4. Run migrations: 
+4. Generate app key:
+    ``php artisan key:generate``
+5. Run migrations: 
     ``php artisan migrate``
-5. Run virtual server:
-    ``php artisan serve``
 6. Publish PDF libary asset:
     ``php artisan vendor:publish --provider="Barryvdh\DomPDF\ServiceProvider"``
+7. Run virtual server:
+    ``php artisan serve``
+
 
 ## Feature Explaination:
 

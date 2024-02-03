@@ -17,8 +17,8 @@ class CreateFruitCategoriesTable extends Migration
         Schema::create('fruit_categories', function (Blueprint $table) {
             $table->id()->unsigned();
             $table->string('name', 25);
-            $table->timestamp('created_at');
-            $table->timestamp('updated_at');
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
         });
 
         $apple = new FruitCategory(['name' => 'Apple']);

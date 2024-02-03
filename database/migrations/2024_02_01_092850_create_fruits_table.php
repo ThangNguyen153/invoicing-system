@@ -19,8 +19,8 @@ class CreateFruitsTable extends Migration
             $table->string('name', 25);
             $table->string('unit');
             $table->unsignedInteger('price');
-            $table->timestamp('created_at');
-            $table->timestamp('updated_at');
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
 
             $table->foreign('category_id')
                 ->references('id')

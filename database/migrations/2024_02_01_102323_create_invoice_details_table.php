@@ -19,8 +19,8 @@ class CreateInvoiceDetailsTable extends Migration
             $table->unsignedBigInteger('fruit_id');
             $table->unsignedInteger('quantity');
             $table->unsignedInteger('amount');
-            $table->timestamp('created_at');
-            $table->timestamp('updated_at');
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
 
             $table->foreign('invoice_id')
                 ->references('id')
